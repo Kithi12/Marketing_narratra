@@ -4,10 +4,16 @@ export const ScrollProgress = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <div className="scroll-progress-container">
+    <div
+      className="scroll-progress-container"
+      style={{ pointerEvents: "none" }}
+    >
       <motion.div
         className="scroll-progress-bar"
-        style={{ scaleX: scrollYProgress }}
+        style={{
+          scaleX: scrollYProgress,
+          pointerEvents: "none",
+        }}
         initial={{ scaleX: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 30 }}
       />
