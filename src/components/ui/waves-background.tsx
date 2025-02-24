@@ -304,7 +304,6 @@ export function Waves({
       updateMouse(e.pageX, e.pageY);
     }
     function onTouchMove(e: TouchEvent) {
-      e.preventDefault();
       const touch = e.touches[0];
       updateMouse(touch.clientX, touch.clientY);
     }
@@ -327,7 +326,7 @@ export function Waves({
     window.addEventListener("resize", onResize);
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("touchmove", onTouchMove, {
-      passive: false,
+      passive: true,
     });
     return () => {
       window.removeEventListener("resize", onResize);
@@ -352,9 +351,11 @@ export function Waves({
       ref={containerRef}
       style={{
         backgroundColor,
+        touchAction: "pan-y", // Allow vertical touch scrolling
+        pointerEvents: "none", // Prevent interference with underlying content
       }}
       className={cn(
-        "absolute top-0 left-0 w-full h-full overflow-hidden",
+        "absolute top-0 left-0 w-full h-full overflow-hidden hidden md:block",
         className
       )}
     >
