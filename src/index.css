@@ -77,10 +77,25 @@ html {
     width: 4px; /* Smaller width for mobile */
   }
   
-  body {
-    overflow-y: scroll !important;
+  html, body {
+    position: relative;
+    overflow-y: auto !important;
     -webkit-overflow-scrolling: touch !important;
     overscroll-behavior-y: contain;
+    touch-action: pan-y pinch-zoom;
+    height: 100%;
+    z-index: 1;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
+    min-height: 100%;
+  }
+
+  .scroll-progress-container {
+    pointer-events: none;
+    z-index: 1000;
   }
 }
 

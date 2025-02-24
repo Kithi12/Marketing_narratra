@@ -13,21 +13,25 @@ import "./styles/scrollbar.css";
 
 export function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <ScrollProgress />
-      <div className="w-full min-h-screen bg-white">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/features" element={<FeaturesPage />} />
-          <Route path="/faq" element={<FaqPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/download" element={<DownloadSection />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="relative z-[1]">
+      {" "}
+      {/* Add this wrapper with z-index */}
+      <Router>
+        <ScrollToTop />
+        <ScrollProgress />
+        <div className="w-full min-h-screen bg-white">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/download" element={<DownloadSection />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </div>
   );
 }
