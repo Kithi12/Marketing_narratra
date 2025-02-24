@@ -1,4 +1,3 @@
-import React from "react";
 import { MemoryRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
@@ -9,9 +8,14 @@ import { ContactPage } from "./pages/ContactPage";
 import { DownloadSection } from "./components/DownloadSection";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { ScrollProgress } from "./components/ScrollProgress";
+import "./styles/scrollbar.css";
+
 export function App() {
-  return <Router>
+  return (
+    <Router>
       <ScrollToTop />
+      <ScrollProgress />
       <div className="w-full min-h-screen bg-white">
         <Navbar />
         <Routes>
@@ -24,5 +28,6 @@ export function App() {
         </Routes>
         <Footer />
       </div>
-    </Router>;
+    </Router>
+  );
 }

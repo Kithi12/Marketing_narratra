@@ -1,0 +1,35 @@
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7ff;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374065;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2847d1;
+  box-shadow: 0 0 10px rgba(58, 94, 240, 0.5);
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Add a progress bar at the top of the page */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #3a5ef0;
+  z-index: 9999;
+}
