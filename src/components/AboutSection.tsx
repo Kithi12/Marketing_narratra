@@ -4,19 +4,19 @@ import { Book, Rocket, Star, Github, Linkedin } from "lucide-react";
 const teamMembers = [
   {
     name: "Savinu Gunarathne",
-    role: "Team Leader & ",
+    role: "Team Leader & Designer ",
     image: "./images/savinu.jpg",
-    bio: "Visionary leader with 10+ years in tech",
+    bio: "A tech enthusiast with a passion for design",
     social: {
       linkedin: "https://www.linkedin.com/in/savinu-gunaratne-a77015218/",
       github: "https://github.com/savinuonline",
     },
   },
   {
-    name: "Kithmina Kaluarachchi",
+    name: "Kithmina Kaushalya",
     role: "Project Manager and Backend Developer",
     image: "./images/kithmina.jpg",
-    bio: "Literature expert specializing in Sinhala classics",
+    bio: "Backend developer with a passion for project management",
     social: {
       linkedin: "www.linkedin.com/in/kithmina-k1000",
       github: "https://github.com/Kithi12",

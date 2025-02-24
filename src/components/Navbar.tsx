@@ -47,11 +47,18 @@ export const Navbar = () => {
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex-shrink-0">
             <div className="flex items-center">
-              <span className="text-white border- px-2.5 py-1 rounded-full text-lg font-medium group-hover:scale-105 transition-transform duration-300 group-hover:shadow-[0_0_15px_#3a5ef0]">
+              <span className="text-white px-2.5 py-1 rounded-full text-lg font-medium group-hover:scale-105 transition-transform duration-300 group-hover:shadow-[0_0_15px_#3a5ef0]">
+                {/* Desktop logo */}
                 <img
                   src="./images/Logo/site_logo2.png"
                   alt="narratra."
-                  className="w-40 h-15 object-contain"
+                  className="w-40 h-15 object-contain hidden md:block"
+                />
+                {/* Mobile logo */}
+                <img
+                  src="images/Favicon/android-chrome-512x512.png"
+                  alt="narratra."
+                  className="w-20 h-12 object-contain md:hidden" // Adjust size as needed
                 />
               </span>
             </div>

@@ -12,7 +12,7 @@ export const Footer = () => {
             <Link to="/" className="inline-block mb-4">
               <span className="inline-block bg-white px-4 py-2 rounded-lg text-lg font-medium group-hover:scale-105 transition-transform duration-300 hover:shadow-[0_0_15px_#3a5ef0]">
                 <img
-                  src="./images/Logo/site_logo2.png"
+                  src="/images/Logo/site_logo2.png"
                   alt="narratra."
                   className="w-40 h-15 object-contain"
                 />
@@ -46,6 +46,10 @@ export const Footer = () => {
                 {
                   name: "Contact",
                   path: "/contact",
+                },
+                {
+                  name: "Get it Now",
+                  path: "/download",
                 },
               ].map((item) => (
                 <li key={item.name}>
@@ -90,11 +94,11 @@ export const Footer = () => {
             </h4>
             <div className="space-y-4">
               <a
-                href="tel:+94112345678"
+                href="tel:+94711187267"
                 className="flex items-center text-gray-400 hover:text-[#3a5ef0] transition-colors duration-300"
               >
                 <FiPhone size={16} className="mr-3 text-[#3a5ef0]" />
-                +94 11 234 5678
+                +94 71 118 7267
               </a>
               <a
                 href="mailto:contact@narratra.com"
@@ -123,7 +127,7 @@ export const Footer = () => {
                 },
                 {
                   icon: <FaXTwitter size={20} />,
-                  url: "https://twitter.com",
+                  url: "https://x.com",
                 },
                 {
                   icon: <FaInstagram size={20} />,
