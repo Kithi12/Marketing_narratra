@@ -352,11 +352,9 @@ export function Waves({
       ref={containerRef}
       style={{
         backgroundColor,
-        position: "fixed", // Change to fixed
-        zIndex: 0, // Ensure it's above the background but below content
       }}
       className={cn(
-        "absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none",
+        "absolute top-0 left-0 w-full h-full overflow-hidden",
         className
       )}
     >
