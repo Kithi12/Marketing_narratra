@@ -1,16 +1,18 @@
 /* Custom Scrollbar Styles */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: #f5f7ff;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #374065;
-  border-radius: 5px;
+  border-radius: 100vh;
+  backdrop-filter: blur(5px);
   transition: all 0.3s ease;
 }
 
@@ -32,4 +34,13 @@ html {
   height: 3px;
   background: #3a5ef0;
   z-index: 9999;
+  backdrop-filter: blur(5px);
+  pointer-events: none;
 }
+
+.scroll-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #3a5ef0, #6384ff);
+    transform-origin: left;
+    border-radius: 0 100vh 100vh 0;
+  }
