@@ -1,4 +1,4 @@
-import { MemoryRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { AboutPage } from "./pages/AboutPage";
@@ -8,7 +8,6 @@ import { ContactPage } from "./pages/ContactPage";
 import { DownloadSection } from "./components/DownloadSection";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { ScrollProgress } from "./components/ScrollProgress";
 import { Waves } from "./components/ui/waves-background";
 import "./styles/scrollbar.css";
 
@@ -19,7 +18,6 @@ export function App() {
       <main className="relative z-[1]">
         <Router>
           <ScrollToTop />
-          <ScrollProgress />
           <div className="w-full min-h-screen bg-white">
             <Navbar />
             <Routes>
