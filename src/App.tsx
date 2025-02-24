@@ -9,29 +9,31 @@ import { DownloadSection } from "./components/DownloadSection";
 import { Footer } from "./components/Footer";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { ScrollProgress } from "./components/ScrollProgress";
+import { Waves } from "./components/ui/waves-background";
 import "./styles/scrollbar.css";
 
 export function App() {
   return (
-    <div className="relative z-[1]">
-      {" "}
-      {/* Add this wrapper with z-index */}
-      <Router>
-        <ScrollToTop />
-        <ScrollProgress />
-        <div className="w-full min-h-screen bg-white">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/features" element={<FeaturesPage />} />
-            <Route path="/faq" element={<FaqPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/download" element={<DownloadSection />} />
-          </Routes>
-          <Footer />
-        </div>
-      </Router>
+    <div className="relative">
+      <Waves />
+      <main className="relative z-[1]">
+        <Router>
+          <ScrollToTop />
+          <ScrollProgress />
+          <div className="w-full min-h-screen bg-white">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/features" element={<FeaturesPage />} />
+              <Route path="/faq" element={<FaqPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/download" element={<DownloadSection />} />
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+      </main>
     </div>
   );
 }
