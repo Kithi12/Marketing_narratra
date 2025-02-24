@@ -348,18 +348,28 @@ export function Waves({
     yGap,
   ]);
   return (
-    <canvas
-      ref={canvasRef}
+    <div
+      ref={containerRef}
       style={{
-        position: "fixed", // Change to fixed
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1, // Place behind content
-        pointerEvents: "none", // Ignore pointer events
+        backgroundColor,
       }}
-      className={className}
-    />
+      className={cn(
+        "absolute top-0 left-0 w-full h-full overflow-hidden",
+        className
+      )}
+    >
+      <div
+        className={cn(
+          "absolute top-0 left-0 rounded-full",
+          "w-2 h-2 bg-foreground/10"
+        )}
+        style={{
+          transform:
+            "translate3d(calc(var(--x) - 50%), calc(var(--y) - 50%), 0)",
+          willChange: "transform",
+        }}
+      />
+      <canvas ref={canvasRef} className="block w-full h-full" />
+    </div>
   );
 }
