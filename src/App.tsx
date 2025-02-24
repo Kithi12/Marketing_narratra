@@ -18,7 +18,7 @@ export function App() {
       <main className="relative z-[1]">
         <Router>
           <ScrollToTop />
-          <div className="w-full min-h-screen bg-white pt-16 md:pt-0">
+          <div className="w-full min-h-screen bg-white pt-18 md:pt-0">
             {" "}
             {/* Add padding top for mobile */}
             <Navbar />
